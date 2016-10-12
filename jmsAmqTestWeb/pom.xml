@@ -15,23 +15,55 @@
   <properties>
          <org.springframework.version>4.1.1.RELEASE</org.springframework.version>
    		 <org.apache.myfaces.version>2.2.5</org.apache.myfaces.version> <!-- 2.1.5 , 2.2.5 -->
-   		 <org.apache.activemq.version>5.7.0</org.apache.activemq.version>  	     
+   		 <org.apache.activemq.version>5.7.0</org.apache.activemq.version>  	<!-- 5.7.0 , 5.14.0 -->     
 	</properties>
 	
 	<dependencies>
 	
-	
+	<!-- client pour rabbitMQ (access JMS , serveur en erlang otp) -->
+    <!--  
+    <dependency> 
+      <groupId>com.rabbitmq</groupId>
+      <artifactId>amqp-client</artifactId>
+      <version>3.6.5</version>
+     </dependency>
+     -->
+     
+     <!--  client JMS 1.1 et JMS2  pour Apache Artemis (version Apache de Jboss HornetQ) -->
+     <!--       
+     <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>artemis-core-client</artifactId>
+      <version>1.4.0</version>
+     </dependency>
+     -->
+     <!-- 
+     <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>artemis-jms-client</artifactId>
+      <version>1.4.0</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.2</version>
+    </dependency>
+    -->
+	 
   <dependency>
   <groupId>org.apache.activemq</groupId>
   <artifactId>activemq-core</artifactId>
   <version>${org.apache.activemq.version}</version>
 </dependency>
 
+
 <dependency>
    <groupId>org.apache.activemq</groupId>
    <artifactId>activemq-pool</artifactId>
    <version>${org.apache.activemq.version}</version>
 </dependency>
+
 
 <!-- JMS 1.1 API =  indirect transitive dependency of activemq-core -->
 	     
